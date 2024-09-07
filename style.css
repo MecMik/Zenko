@@ -3,13 +3,14 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Sfondo spazio */
 .space-background {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, #001D3D, #050014); /* Gradiente di blu scuro per il cielo */
+    background: linear-gradient(to bottom, #001D3D, #050014); /* Gradiente per lo spazio */
     position: relative;
     overflow: hidden;
 }
@@ -18,7 +19,7 @@ body {
 .planet {
     width: 150px;
     height: 150px;
-    background: radial-gradient(circle, #FF6F61, #B23A48); /* Colori cartoon per Marte */
+    background: radial-gradient(circle, #FF6F61, #B23A48); /* Colore di Marte */
     border-radius: 50%;
     position: absolute;
     bottom: 10%;
