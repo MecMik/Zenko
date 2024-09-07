@@ -1,4 +1,8 @@
-// Esempio di animazione JavaScript o funzione futura
-document.addEventListener('DOMContentLoaded', function() {
-  console.log("Il sito di Michele del bene è stato caricato!");
+// animations.js
+document.addEventListener("DOMContentLoaded", function() {
+    const ctaButton = document.querySelector('.cta');
+    
+    ctaButton.addEventListener('click', () => {
+        alert('Inizia a esplorare!');
+    });
 });
