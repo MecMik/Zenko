@@ -1,13 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const ctaButton = document.querySelector('.cta-button');
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll('.button');
 
-  ctaButton.addEventListener('mouseenter', () => {
-    ctaButton.style.transform = 'scale(1.1)';
-  });
+    buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();  // Evita il comportamento predefinito del link
+            const page = e.target.textContent;
+            showLoading(page);
+        });
+    });
 
-  ctaButton.addEventListener('mouseleave', () => {
-    ctaButton.style.transform = 'scale(1)';
-  });
+    function showLoading(page) {
+        // Creare un pop-up di caricamento simulato
+        const loadingOverlay = document.createElement('div');
+        loadingOverlay.classList.add('loading-overlay');
+        loadingOverlay.innerHTML = `<div class="loading-content">
+                                        <p>Caricamento ${page}...</p>
+                                        <div class="spinner"></div>
+                                    </div>`;
+        document.body.appendChild(loadingOverlay);
 
-  // Aggiungere altre animazioni se necessario
+        // Rimuovere l'overlay dopo 2 secondi e simulare il caricamento della nuova pagina
+        setTimeout(() => {
+            loadingOverlay.remove();
+            alert(`${page} è pronto (funzione in arrivo)!`);
+        }, 2000);
+    }
 });
