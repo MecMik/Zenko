@@ -6,27 +6,38 @@ body {
     background-position: center;
     color: white;
     font-family: 'Arial', sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* Stile dei titoli */
+/* Navigazione */
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Titoli con effetto floating */
 h2, h3 {
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: float 5s ease-in-out infinite;
 }
 
-/* Effetto Hover su immagini */
-figure img {
-    transition: transform 0.5s ease-in-out;
-}
-
-figure img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
-/* Animazione di fluttuazione dei titoli */
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -36,11 +47,42 @@ figure img:hover {
     }
 }
 
-h2 {
-    animation: float 4s ease-in-out infinite;
+/* Figure e immagini */
+figure {
+    margin: 20px 0;
+    position: relative;
 }
 
-/* Effetto Parallax sulle sezioni */
+figure img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+figure img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: white;
+}
+
+/* Parallax */
 .parallax {
     background-image: url('https://files.oaiusercontent.com/file-hIadtNqYs82se4QGcoOAITMo?se=2024-09-08T10%3A34%3A07Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D244788a1-c192-4438-a522-b96d3d9fadfe.webp&sig=GijJyyyz3gQG7a/LV6wJX/Vd6JnoJtXgiaJmKiYYo34%3D');
     min-height: 500px;
@@ -48,32 +90,4 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-/* Stile della navigazione */
-nav {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-/* Stile del footer */
-footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-footer a {
-    color: #b3e5fc;
-    text-decoration: none;
 }
