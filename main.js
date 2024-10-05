@@ -1,4 +1,22 @@
-// Pianeti in movimento
+// Creare stelle animate
+function createStars() {
+    const starsContainer = document.createElement('div');
+    starsContainer.classList.add('stars');
+    document.body.appendChild(starsContainer);
+
+    for (let i = 0; i < 100; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.top = `${Math.random() * 100}vh`;
+        star.style.left = `${Math.random() * 100}vw`;
+        star.style.animationDuration = `${Math.random() * 10 + 5}s`;
+        starsContainer.appendChild(star);
+    }
+}
+
+createStars();
+
+// Movimento pianeti
 const mars = document.querySelector('.mars');
 const jupiter = document.querySelector('.jupiter');
 const saturn = document.querySelector('.saturn');
@@ -18,19 +36,3 @@ function movePlanet(planet, minX, maxX, minY, maxY, duration) {
 movePlanet(mars, -100, 100, -50, 50, 10);
 movePlanet(jupiter, -200, 200, -100, 100, 15);
 movePlanet(saturn, -150, 150, -80, 80, 12);
-
-// Animazione dello sfondo
-const backgroundSpeed = 0.02;
-let backgroundPositionX = 0;
-let backgroundPositionY = 0;
-
-function animateBackground() {
-    backgroundPositionX += backgroundSpeed;
-    backgroundPositionY += backgroundSpeed;
-
-    document.body.style.backgroundPosition = `${backgroundPositionX}px ${backgroundPositionY}px`;
-
-    requestAnimationFrame(animateBackground);
-}
-
-animateBackground();
