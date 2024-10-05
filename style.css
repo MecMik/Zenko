@@ -1,41 +1,101 @@
-/* Stile generale del corpo della pagina */
+/* Stile generale */
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #000;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-/* Contenitore centrale con il testo */
-.container {
+/* Stile dell'header */
+header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(0, 0, 50, 0.8);
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+/* Menu in alto a sinistra */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu ul li a {
     color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Logo in alto a destra */
+.logo h1 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Sezione principale (centrale) */
+.hero-section {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: center;
 }
 
-h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    text-shadow: 0 0 20px #fff, 0 0 30px #00f, 0 0 40px #0ff;
+.hero-text {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #00f;
 }
 
-/* Sfondo animato con stelle */
-@keyframes moveBackground {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 1000px 1000px;
-    }
+.subtext {
+    font-size: 1.5rem;
+    color: #aaa;
 }
 
+/* Pianeti */
+.planets {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.planet {
+    position: absolute;
+    width: 150px;
+    opacity: 0.8;
+}
+
+.mars {
+    top: 10%;
+    left: 5%;
+}
+
+.jupiter {
+    top: 30%;
+    left: 70%;
+}
+
+.saturn {
+    top: 60%;
+    left: 50%;
+}
+
+/* Sfondo animato con costellazioni */
 body {
     background: url('https://www.solarsystemscope.com/textures/download/2k_stars_milky_way.jpg');
     background-size: cover;
-    animation: moveBackground 60s linear infinite;
 }
