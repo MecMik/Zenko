@@ -1,93 +1,41 @@
-/* Sfondo principale */
+/* Stile generale del corpo della pagina */
 body {
-    background-image: url('https://files.oaiusercontent.com/file-43oqGJTax9r057Eeftgr31te?se=2024-09-08T10%3A34%3A07Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D2b5bd0de-c06b-43a3-a8ec-faea42507b1d.webp&sig=DX21Zrt0cEpkX2RWls86v4PqJDGm2nVRK3TPfFB5aSI%3D');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    color: white;
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    font-family: Arial, sans-serif;
 }
 
-/* Navigazione */
-nav {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Titoli con effetto floating */
-h2, h3 {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    animation: float 5s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-/* Figure e immagini */
-figure {
-    margin: 20px 0;
-    position: relative;
-}
-
-figure img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s, box-shadow 0.5s;
-}
-
-figure img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-}
-
-figcaption {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    color: white;
-}
-
-/* Footer */
-footer {
-    background-color: rgba(0, 0, 0, 0.8);
+/* Contenitore centrale con il testo */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    color: white;
 }
 
-/* Parallax */
-.parallax {
-    background-image: url('https://files.oaiusercontent.com/file-hIadtNqYs82se4QGcoOAITMo?se=2024-09-08T10%3A34%3A07Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D244788a1-c192-4438-a522-b96d3d9fadfe.webp&sig=GijJyyyz3gQG7a/LV6wJX/Vd6JnoJtXgiaJmKiYYo34%3D');
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 0 20px #fff, 0 0 30px #00f, 0 0 40px #0ff;
+}
+
+/* Sfondo animato con stelle */
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1000px 1000px;
+    }
+}
+
+body {
+    background: url('https://www.solarsystemscope.com/textures/download/2k_stars_milky_way.jpg');
     background-size: cover;
+    animation: moveBackground 60s linear infinite;
 }
