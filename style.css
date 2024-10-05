@@ -8,20 +8,24 @@ body {
     overflow-x: hidden;
 }
 
+/* Sfondo con animazioni */
+body {
+    background: url('https://www.solarsystemscope.com/textures/download/2k_stars_milky_way.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
 /* Stile dell'header */
 header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: rgba(0, 0, 50, 0.8);
     position: absolute;
     width: 100%;
     top: 0;
 }
 
-/* Menu in alto a sinistra */
 .menu ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -37,7 +41,6 @@ header {
     font-size: 1.2rem;
 }
 
-/* Logo in alto a destra */
 .logo h1 {
     font-size: 2rem;
     color: #fff;
@@ -45,15 +48,15 @@ header {
 
 /* Sezione principale (centrale) */
 .hero-section {
-    position: relative;
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
 .hero-text {
     font-size: 3rem;
-    letter-spacing: 2px;
     color: #fff;
     text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #00f;
 }
@@ -92,10 +95,4 @@ header {
 .saturn {
     top: 60%;
     left: 50%;
-}
-
-/* Sfondo animato con costellazioni */
-body {
-    background: url('https://www.solarsystemscope.com/textures/download/2k_stars_milky_way.jpg');
-    background-size: cover;
 }
