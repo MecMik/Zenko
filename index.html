@@ -3,28 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenko Coin</title>
-    <link rel="stylesheet" href="style.css">
+    <title>INEED - Trova servizi e noleggia strumenti</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Zenko</h1>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">INEED</h1>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Servizi</a></li>
+                <li><a href="#">Accedi</a></li>
+                <li><a href="#">Registrati</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Trova persone e strumenti con un click!</h1>
+            <p>Cerca servizi o noleggia gli strumenti di cui hai bisogno</p>
+            <div class="search-box">
+                <input type="text" placeholder="Cosa cerchi oggi?">
+                <button>Cerca</button>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <div class="center-text">
-            <h2>Zenko Coin Triple Scam From MeckMike00</h2>
-            <p>Work in progress By MDB</p>
+    <!-- Categorie di Servizi -->
+    <section class="categories">
+        <div class="container">
+            <h2>Categorie di Servizi</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <img src="images/gardening.jpg" alt="Giardinaggio">
+                    <h3>Giardinaggio</h3>
+                </div>
+                <div class="category-item">
+                    <img src="images/cleaning.jpg" alt="Pulizia">
+                    <h3>Pulizia</h3>
+                </div>
+                <div class="category-item">
+                    <img src="images/tools.jpg" alt="Noleggio Strumenti">
+                    <h3>Noleggio Strumenti</h3>
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Pianeti animati -->
-    <div class="planets">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Mars_transparent.png" class="planet mars" alt="Marte">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.png" class="planet jupiter" alt="Giove">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn.png" class="planet saturn" alt="Saturno">
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 INeed.com. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
 
-    <script src="main.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
